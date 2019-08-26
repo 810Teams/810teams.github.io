@@ -1,0 +1,11 @@
+/*
+ * Utility CSS Classes
+ */
+
+.indent {
+    text-indent: 2.5em;
+} 
+
+.indent-small {
+    text-indent: 1em;
+}
