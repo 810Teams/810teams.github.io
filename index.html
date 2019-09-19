@@ -34,7 +34,7 @@
     <div id="app">
       <!-- Onload Methods -->
       <div style="display: none;">
-          {{ initLanguage() }}
+        {{ initLanguage() }}
       </div>
 
       <nav
@@ -65,30 +65,48 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#about">{{ get(content.nav.about) }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#education"
-                >Education</a
+                >{{ get(content.nav.education) }}</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#activities"
-                >Activities</a
+                >{{ get(content.nav.activities) }}</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+              <a class="nav-link js-scroll-trigger" href="#skills">{{ get(content.nav.skills) }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#achievements"
-                >Achievements</a
+                >{{ get(content.nav.achievements) }}</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#interests"
-                >Interests</a
+                >{{ get(content.nav.interests) }}</a
               >
+            </li>
+            <br />
+            <li class="nav-item">
+              <button class="btn btn-dark" v-if="lang == 'en'" v-on:click="setLanguage('th')">
+                <a class="nav-link">
+                  English
+                </a>
+              </button>
+              <button class="btn btn-dark" v-if="lang == 'th'" v-on:click="setLanguage('jp')">
+                <a class="nav-link">
+                  Thai
+                </a>
+              </button>
+              <button class="btn btn-dark" v-if="lang == 'jp'" v-on:click="setLanguage('en')">
+                <a class="nav-link">
+                  Japanese
+                </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -101,18 +119,17 @@
         >
           <div class="w-100">
             <h1 class="mb-0">
-              {{ get(content.firstName) }}
-              <span class="text-primary">{{ get(content.lastName) }}</span>
+              {{ get(content.about.firstName) }}
+              <span class="text-primary">{{ get(content.about.lastName) }}</span>
             </h1>
             <div class="subheading mb-5">
-                {{ get(content.location) }} · (+66) 86 086 41XX ·
+              {{ get(content.about.location) }} · (+66) 86 086 41XX ·
               <a href="mailto:teerapat_saint@hotmail.com"
                 >teerapat_saint@hotmail.com</a
               >
             </div>
             <p class="lead mb-5">
-              3rd Year Information Technology Student at King Mongkut's
-              Institute Technology Ladkrabang.
+              {{ get(content.about.intro )}}
             </p>
             <div class="social-icons">
               <a
@@ -371,15 +388,15 @@
               <ul class="fa-ul mb-0">
                 <li>
                   <i class="fa-li fas fa-globe-asia"></i>
-                  <a v-on:click="lang='th'">Thai</a> (Native Speaker)
+                  Thai <i>(Native Speaker)</i>
                 </li>
                 <li>
                   <i class="fa-li fas fa-globe-americas"></i>
-                  <a href="#" v-on:click="lang='en'">English</a> (C1)
+                  English <i>(C1)</i>
                 </li>
                 <li>
                   <i class="fa-li fas fa-globe-asia"></i>
-                  <a href="#" v-on:click="lang='jp'">Japanese</a> (A2)
+                  Japanese <i>(A2)</i>
                 </li>
               </ul>
             </div>
@@ -429,6 +446,10 @@
       </div>
     </div>
 
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="lang/lang.js"></script>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -438,9 +459,5 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
-
-    <!-- Vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="lang/lang.js"></script>
   </body>
 </html>
