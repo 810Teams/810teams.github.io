@@ -18,7 +18,7 @@ var app = new Vue({
         about: {
           en: "About",
           th: "เกี่ยวกับ",
-          jp: "一般情報"
+          jp: "私の事"
         },
         education: {
           en: "Education",
@@ -33,7 +33,7 @@ var app = new Vue({
         skills: {
           en: "Skills",
           th: "ความสามารถ",
-          jp: "スクリ"
+          jp: "スキリ"
         },
         achievements: {
           en: "Achievements",
