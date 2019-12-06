@@ -47,7 +47,7 @@
           <span class="d-none d-lg-block">
             <img
               class="img-fluid img-profile rounded-circle mx-auto mb-2"
-              src="img/profile.jpg"
+              src="img/profile.jpeg"
               alt=""
             />
           </span>
@@ -66,34 +66,34 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">{{
-                get(content.nav.about)
-              }}</a>
+              <a class="nav-link js-scroll-trigger" href="#about"
+                >{{ get(content.nav.about) }}</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#education">{{
-                get(content.nav.education)
-              }}</a>
+              <a class="nav-link js-scroll-trigger" href="#education"
+                >{{ get(content.nav.education) }}</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#activities">{{
-                get(content.nav.activities)
-              }}</a>
+              <a class="nav-link js-scroll-trigger" href="#activities"
+                >{{ get(content.nav.activities) }}</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills">{{
-                get(content.nav.skills)
-              }}</a>
+              <a class="nav-link js-scroll-trigger" href="#skills"
+                >{{ get(content.nav.skills) }}</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#achievements">{{
-                get(content.nav.achievements)
-              }}</a>
+              <a class="nav-link js-scroll-trigger" href="#achievements"
+                >{{ get(content.nav.achievements) }}</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#interests">{{
-                get(content.nav.interests)
-              }}</a>
+              <a class="nav-link js-scroll-trigger" href="#interests"
+                >{{ get(content.nav.interests) }}</a
+              >
             </li>
             <br />
             <li class="nav-item">
@@ -138,9 +138,9 @@
           <div class="w-100">
             <h1 class="mb-0">
               {{ get(content.about.firstName) }}
-              <span class="text-primary">{{
-                get(content.about.lastName)
-              }}</span>
+              <span class="text-primary"
+                >{{ get(content.about.lastName) }}</span
+              >
             </h1>
             <div class="subheading mb-5">
               {{ get(content.about.location) }} · (+66) 86 086 41XX ·
@@ -173,7 +173,7 @@
           id="education"
         >
           <div class="w-100">
-            <h2 class="mb-5">Education</h2>
+            <h2 class="mb-5">{{ get(content.nav.education) }}</h2>
 
             <div
               class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
@@ -217,7 +217,7 @@
                   <li>
                     <i class="fa-li fa fa-certificate text-warning"></i>
                     Special Program (SP) specializes in the addition of English
-                    classes and activites.
+                    classes and activities.
                   </li>
                 </ul>
               </div>
@@ -260,7 +260,7 @@
           id="activities"
         >
           <div class="w-100">
-            <h2 class="mb-5">Activities</h2>
+            <h2 class="mb-5">{{ get(content.nav.activities) }}</h2>
 
             <div
               class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
@@ -353,20 +353,7 @@
           id="skills"
         >
           <div class="w-100">
-            <h2 class="mb-5">Skills</h2>
-
-            <!-- <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item">
-              <i class="fab fa-html5"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-css3-alt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-js-square"></i>
-            </li>
-          </ul> -->
+            <h2 class="mb-5">{{ get(content.nav.skills) }}</h2>
 
             <div class="mb-5">
               <div class="subheading mb-3">
@@ -423,21 +410,55 @@
             </div>
 
             <div class="mb-5">
+              <div class="subheading mb-3">Tech</div>
+              <ul class="fa-ul mb-0">
+                <li>
+                  <i class="fa-li fas fa-brain"></i>
+                  Algorithms
+                </li>
+                <li>
+                  <i class="fa-li fas fa-database"></i>
+                  Database
+                </li>
+                <li>
+                  <i class="fa-li far fa-window-maximize"></i>
+                  Desktop Application Development
+                </li>
+                <li>
+                  <i class="fa-li fas fa-microchip"></i>
+                  Microprocessors
+                </li>
+                <li>
+                  <i class="fa-li fas fa-network-wired"></i>
+                  Microservices
+                </li>
+                <li>
+                  <i class="fa-li fas fa-mobile-alt"></i>
+                  Mobile Application Development
+                </li>
+                <li>
+                  <i class="fa-li far fa-window-restore"></i>
+                  Website Development
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-5">
               <div class="subheading mb-3">
                 Languages
               </div>
               <ul class="fa-ul mb-0">
                 <li>
                   <i class="fa-li fas fa-globe-asia"></i>
-                  Thai <i>(Native Speaker)</i>
+                  Thai <i>(Native)</i>
                 </li>
                 <li>
-                  <i class="fa-li fas fa-globe-americas"></i>
-                  English <i>(C1)</i>
+                  <i class="fa-li fas fa-globe-europe"></i>
+                  English <i>(TOEIC 870)</i>
                 </li>
                 <li>
                   <i class="fa-li fas fa-globe-asia"></i>
-                  Japanese <i>(A2)</i>
+                  Japanese <i>(N4)</i>
                 </li>
               </ul>
             </div>
@@ -451,12 +472,22 @@
           id="achievements"
         >
           <div class="w-100">
-            <h2 class="mb-5">Achievements</h2>
+            <h2 class="mb-5">{{ get(content.nav.achievements) }}</h2>
             <ul class="fa-ul mb-0">
+              <li>
+                <i class="fa-li fa fa-certificate text-warning"></i>
+                4-Year Scholarship at Faculty of Information Technology, King
+                Mongkut's Institute of Technology Ladkrabang (IT KMITL) (2017)
+              </li>
               <li>
                 <i class="fa-li fa fa-certificate text-warning"></i>
                 Test of English for International Communication (TOEIC) of
                 870/990 (August 2019)
+              </li>
+              <li>
+                <i class="fa-li fa fa-certificate text-warning"></i>
+                Japanese Language Proficiency Test (JLPT) N4 of ?/180 (December
+                2019)
               </li>
             </ul>
           </div>
@@ -469,7 +500,7 @@
           id="interests"
         >
           <div class="w-100">
-            <h2 class="mb-5">Interests</h2>
+            <h2 class="mb-5">{{ get(content.nav.interests) }}</h2>
             <p>
               In a field of information technology, my most interested topic
               would be software and web development. As for special topics, I

@@ -5,13 +5,15 @@
  */
 
 :root {
-  --palette-light: #dfffff;
-  --palette-main: #6760aa;
-  --palette-dark: #5d5799;
-  /* Default Palette Below */
+  /* Default Color Palette */
   /* --palette-light: #D48A6E;
   --palette-main: #BD5D38;
   --palette-dark: #824027; */
+
+  /* Pink Martini on a Cold Beach Color Palette */
+  --palette-light: #dfffff;
+  --palette-main: #6760aa;
+  --palette-dark: #5d5799;
 }
 
 body {

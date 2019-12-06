@@ -38,7 +38,7 @@ var app = new Vue({
         achievements: {
           en: "Achievements",
           th: "ความสำเร็จ",
-          jp: "達成"
+          jp: "業績"
         },
         interests: {
           en: "Interests",
