@@ -1,0 +1,89 @@
+:root {
+  /* Default Color Palette */
+  /* --palette-light: #D48A6E;
+    --palette-main: #BD5D38;
+    --palette-dark: #824027; */
+
+  /* Pink Martini on a Cold Beach Color Palette */
+  --palette-light: #dfffff;
+  --palette-main: #6760aa;
+  --palette-dark: #5d5799;
+}
+
+#gallery .gallery-item {
+  right: 0;
+  margin: 0 0 15px;
+}
+
+#gallery .gallery-item .gallery-link {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#gallery .gallery-item .gallery-link img {
+  width: 400px;
+  height: 225px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#gallery .gallery-item .gallery-link .gallery-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: rgba(254, 209, 54, 0.9);
+}
+
+#gallery .gallery-item .gallery-link .gallery-hover:hover {
+  opacity: 1;
+}
+
+#gallery .gallery-item .gallery-link .gallery-hover .gallery-hover-content {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: white;
+}
+
+#gallery .gallery-item .gallery-link .gallery-hover .gallery-hover-content i {
+  margin-top: -12px;
+}
+
+#gallery .gallery-item .gallery-link .gallery-hover .gallery-hover-content h3,
+#gallery .gallery-item .gallery-link .gallery-hover .gallery-hover-content h4 {
+  margin: 0;
+}
+
+#gallery .gallery-item .gallery-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+#gallery .gallery-item .gallery-caption h4 {
+  margin: 0;
+  text-transform: none;
+}
+
+#gallery .gallery-item .gallery-caption p {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (min-width: 767px) {
+  #gallery .gallery-item {
+    margin: 0 0 30px;
+  }
+}

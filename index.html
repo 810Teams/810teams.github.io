@@ -2,32 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
 
     <title>Teerapat Kraisrisirikul's Profile</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Custom fonts for this template -->
     <link
       href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
-      rel="stylesheet"
-    />
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" />
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Custom styles for this template -->
-    <link href="css/resume.css" rel="stylesheet" />
-    <link href="css/utils.css" rel="stylesheet" />
+    <link href="css/resume.css" rel="stylesheet" type="text/css" />
+    <link href="css/gallery.css" rel="stylesheet" type="text/css" />
+    <link href="css/utils.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body id="page-top">
@@ -38,10 +33,7 @@
       </div>
 
       <!-- Navigation Bar -->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
-        id="sideNav"
-      >
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
           <span class="d-block d-lg-none">Teerapat Kraisrisirikul</span>
           <span class="d-none d-lg-block">
@@ -66,9 +58,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about"
-                >{{ get(content.nav.about) }}</a
-              >
+              <a class="nav-link js-scroll-trigger" href="#about">{{ get(content.nav.about) }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#education"
@@ -81,9 +71,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills"
-                >{{ get(content.nav.skills) }}</a
-              >
+              <a class="nav-link js-scroll-trigger" href="#skills">{{ get(content.nav.skills) }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#achievements"
@@ -95,31 +83,22 @@
                 >{{ get(content.nav.interests) }}</a
               >
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
+            </li>
             <br />
             <li class="nav-item">
-              <button
-                class="btn btn-dark"
-                v-if="lang == 'en'"
-                v-on:click="setLanguage('th')"
-              >
+              <button class="btn btn-dark" v-if="lang == 'en'" v-on:click="setLanguage('th')">
                 <a class="nav-link">
                   English
                 </a>
               </button>
-              <button
-                class="btn btn-dark"
-                v-if="lang == 'th'"
-                v-on:click="setLanguage('jp')"
-              >
+              <button class="btn btn-dark" v-if="lang == 'th'" v-on:click="setLanguage('jp')">
                 <a class="nav-link">
                   ภาษาไทย
                 </a>
               </button>
-              <button
-                class="btn btn-dark"
-                v-if="lang == 'jp'"
-                v-on:click="setLanguage('en')"
-              >
+              <button class="btn btn-dark" v-if="lang == 'jp'" v-on:click="setLanguage('en')">
                 <a class="nav-link">
                   日本語
                 </a>
@@ -128,34 +107,26 @@
           </ul>
         </div>
       </nav>
-
-      <!-- Section #1 : About -->
+      
+      <!-- Content -->
       <div class="container-fluid p-0">
-        <section
-          class="resume-section p-3 p-lg-5 d-flex align-items-center"
-          id="about"
-        >
+
+        <!-- Section 1 - About -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
           <div class="w-100">
             <h1 class="mb-0">
               {{ get(content.about.firstName) }}
-              <span class="text-primary"
-                >{{ get(content.about.lastName) }}</span
-              >
+              <span class="text-primary">{{ get(content.about.lastName) }}</span>
             </h1>
             <div class="subheading mb-5">
               {{ get(content.about.location) }} · (+66) 86 086 41XX ·
-              <a href="mailto:teerapat_saint@hotmail.com"
-                >teerapat_saint@hotmail.com</a
-              >
+              <a href="mailto:teerapat_saint@hotmail.com">teerapat_saint@hotmail.com</a>
             </div>
             <p class="lead mb-5">
               {{ get(content.about.intro) }}
             </p>
             <div class="social-icons">
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/teerapat-k-771756149/"
-              >
+              <a target="_blank" href="https://www.linkedin.com/in/teerapat-k-771756149/">
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a target="_blank" href="https://github.com/810Teams">
@@ -167,17 +138,12 @@
 
         <hr class="m-0" />
 
-        <!-- Section #2 : Education -->
-        <section
-          class="resume-section p-3 p-lg-5 d-flex align-items-center"
-          id="education"
-        >
+        <!-- Section 2 - Education -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
           <div class="w-100">
             <h2 class="mb-5">{{ get(content.nav.education) }}</h2>
 
-            <div
-              class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-            >
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
                 <h3 class="mb-0">
                   King Mongkut's Institute of Technology Ladkrabang
@@ -187,12 +153,11 @@
                 </div>
                 <ul class="fa-ul mb-0">
                   <li>
-                    <i class="fa-li fa fa-certificate text-warning"></i>Current
-                    Cumulative GPA of 3.84
+                    <i class="fa-li fa fa-certificate text-warning"></i>Current Cumulative GPA of
+                    3.84
                   </li>
                   <li>
-                    <i class="fa-li fa fa-certificate text-warning"></i>4-Year
-                    Scholarship Student
+                    <i class="fa-li fa fa-certificate text-warning"></i>4-Year Scholarship Student
                   </li>
                 </ul>
               </div>
@@ -201,9 +166,7 @@
               </div>
             </div>
 
-            <div
-              class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-            >
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
                 <h3 class="mb-0">Satriwitthaya 2 School (High School)</h3>
                 <div class="subheading mb-3">
@@ -211,13 +174,12 @@
                 </div>
                 <ul class="fa-ul mb-0">
                   <li>
-                    <i class="fa-li fa fa-certificate text-warning"></i
-                    >Cumulative GPA of 3.17
+                    <i class="fa-li fa fa-certificate text-warning"></i>Cumulative GPA of 3.17
                   </li>
                   <li>
                     <i class="fa-li fa fa-certificate text-warning"></i>
-                    Special Program (SP) specializes in the addition of English
-                    classes and activities.
+                    Special Program (SP) specializes in the addition of English classes and
+                    activities.
                   </li>
                 </ul>
               </div>
@@ -226,9 +188,7 @@
               </div>
             </div>
 
-            <div
-              class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-            >
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
                 <h3 class="mb-0">Satriwitthaya 2 School (Middle School)</h3>
                 <div class="subheading mb-3">English Program (EP)</div>
@@ -238,9 +198,7 @@
               </div>
             </div>
 
-            <div
-              class="resume-item d-flex flex-column flex-md-row justify-content-between"
-            >
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
               <div class="resume-content">
                 <h3 class="mb-0">Chokchai School (Primary School)</h3>
                 <div class="subheading mb-3">English Program (EP)</div>
@@ -254,89 +212,72 @@
 
         <hr class="m-0" />
 
-        <!-- Section #3 : Activities -->
-        <section
-          class="resume-section p-3 p-lg-5 d-flex align-items-center"
-          id="activities"
-        >
+        <!-- Section 3 - Activities -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="activities">
           <div class="w-100">
             <h2 class="mb-5">{{ get(content.nav.activities) }}</h2>
 
-            <div
-              class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-            >
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
                 <h3 class="mb-0">UEC Sakura Science Program</h3>
                 <div class="subheading mb-3">
                   Participator
                 </div>
                 <div>
-                  UEC Sakura Science Program is a program for university
-                  students from different nations to come to Japan and learn
-                  about Japan's technologies.
+                  Sakura Science Program is an exchange program in which participators are from
+                  several countries being invited to Japan to learn and participate in activities
+                  related to science and technologies. In this case, the UEC Sakura Science Program,
+                  The University of Electro-Communications (UEC) is the host institution.
                 </div>
               </div>
               <div class="resume-date text-md-right">
-                <span class="text-primary"
-                  >27th October 2019 - 2nd November 2019</span
-                >
+                <span class="text-primary">27th October 2019 - 2nd November 2019</span>
               </div>
             </div>
 
-            <div
-              class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-            >
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
                 <h3 class="mb-0">IT KMITL Open-House 2018</h3>
                 <div class="subheading mb-3">
                   Problem Solving and Data Analysis Competition Supervisor
                 </div>
                 <div>
-                  IT KMITL Open-House normally has 3 competitions. Problem
-                  Solving and Data Analysis Competition is one of the 3
-                  competitions. Competetors will be high school students. All
-                  competetors will be awarded with a certificate from
-                  participation. Top rankers will be awarded with a special
-                  prize and certificate by the dean of the faculty.
+                  IT KMITL Open-House normally has 3 competitions. Problem Solving and Data Analysis
+                  Competition is one of the 3 competitions. Competetors will be high school
+                  students. All competetors will be awarded with a certificate from participation.
+                  Top rankers will be awarded with a special prize and certificate by the dean of
+                  the faculty.
                 </div>
               </div>
               <div class="resume-date text-md-right">
                 <span class="text-primary">August 2018</span>
               </div>
             </div>
-            <div
-              class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-            >
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
                 <h3 class="mb-0">Pre-Programming 2018 (Preparatory Course)</h3>
                 <div class="subheading mb-3">Instructor</div>
                 <div>
-                  Pre-Programming 2018 is a preparatory course of Faculty of
-                  Information Technology, King Mongkut's Institute Technology
-                  Ladkrabang. This course will cover from basic to intermediate
-                  Python programming and algorithms. Attenders will be all new
-                  1st year students, as the instructors and teaching assistants
-                  will be 2nd year students. The course will take place before
-                  the first semester arrives.
+                  Pre-Programming 2018 is a preparatory course of Faculty of Information Technology,
+                  King Mongkut's Institute Technology Ladkrabang. This course will cover from basic
+                  to intermediate Python programming and algorithms. Attenders will be all new 1st
+                  year students, as the instructors and teaching assistants will be 2nd year
+                  students. The course will take place before the first semester arrives.
                 </div>
               </div>
               <div class="resume-date text-md-right">
                 <span class="text-primary">May 2018 - July 2018</span>
               </div>
             </div>
-            <div
-              class="resume-item d-flex flex-column flex-md-row justify-content-between"
-            >
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
               <div class="resume-content">
                 <h3 class="mb-0">ToBeIT@KMITL 2017 Event</h3>
                 <div class="subheading mb-3">President</div>
                 <div>
-                  ToBeIT@KMITL is an event of Faculty of Information Technology,
-                  King Mongkut's Institute Technology Ladkrabang. This event
-                  gathers up high school students who have interests in having
-                  an entrance exam to IT KMITL. They will attend classes having
-                  a review before taking an entrance exam, lectured by 1st year
-                  students.
+                  ToBeIT@KMITL is an event of Faculty of Information Technology, King Mongkut's
+                  Institute Technology Ladkrabang. This event gathers up high school students who
+                  have interests in having an entrance exam to IT KMITL. They will attend classes
+                  having a review before taking an entrance exam, lectured by 1st year students.
                 </div>
               </div>
               <div class="resume-date text-md-right">
@@ -348,10 +289,8 @@
 
         <hr class="m-0" />
 
-        <section
-          class="resume-section p-3 p-lg-5 d-flex align-items-center"
-          id="skills"
-        >
+        <!-- Section 4 - Skills -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
           <div class="w-100">
             <h2 class="mb-5">{{ get(content.nav.skills) }}</h2>
 
@@ -467,27 +406,23 @@
 
         <hr class="m-0" />
 
-        <section
-          class="resume-section p-3 p-lg-5 d-flex align-items-center"
-          id="achievements"
-        >
+        <!-- Section 5 - Achievements -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="achievements">
           <div class="w-100">
             <h2 class="mb-5">{{ get(content.nav.achievements) }}</h2>
             <ul class="fa-ul mb-0">
               <li>
                 <i class="fa-li fa fa-certificate text-warning"></i>
-                4-Year Scholarship at Faculty of Information Technology, King
-                Mongkut's Institute of Technology Ladkrabang (IT KMITL) (2017)
+                4-Year Scholarship at Faculty of Information Technology, King Mongkut's Institute of
+                Technology Ladkrabang (IT KMITL) (2017)
               </li>
               <li>
                 <i class="fa-li fa fa-certificate text-warning"></i>
-                Test of English for International Communication (TOEIC) of
-                870/990 (August 2019)
+                Test of English for International Communication (TOEIC) of 870/990 (August 2019)
               </li>
               <li>
                 <i class="fa-li fa fa-certificate text-warning"></i>
-                Japanese Language Proficiency Test (JLPT) N4 of ?/180 (December
-                2019)
+                Japanese Language Proficiency Test (JLPT) N4 of ?/180 (December 2019)
               </li>
             </ul>
           </div>
@@ -495,24 +430,80 @@
 
         <hr class="m-0" />
 
-        <section
-          class="resume-section p-3 p-lg-5 d-flex align-items-center"
-          id="interests"
-        >
+        <!-- Section 6 - Interests -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
           <div class="w-100">
             <h2 class="mb-5">{{ get(content.nav.interests) }}</h2>
             <p>
-              In a field of information technology, my most interested topic
-              would be software and web development. As for special topics, I
-              would pick data-related topics, machine learning and artificial
-              intelligence as my most interested topics, since they are likely
-              to have a big role in the future.
+              In a field of information technology, my most interested topic would be software and
+              web development. As for special topics, I would pick data-related topics, machine
+              learning and artificial intelligence as my most interested topics, since they are
+              likely to have a big role in the future.
             </p>
             <p>
-              Apart from being a developer, I enjoy studying Japanese language.
-              I am currently studying Japanese language by myself everyday. I
-              wish to master it someday.
+              Apart from being a developer, I enjoy studying Japanese language. I am currently
+              studying Japanese language by myself everyday. I wish to master it someday.
             </p>
+          </div>
+        </section>
+
+        <hr class="m-0" />
+
+        <!-- Section 7 - Gallery -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="gallery">
+          <div class="w-100">
+            <h2 class="mb-5">Gallery</h2>
+            <div class="container">
+              <div class="row">
+                <!-- Gallery Item - Video Game Sales -->
+                <div class="col-md-4 col-sm-6 gallery-item">
+                  <a
+                    class="gallery-link"
+                    target="_blank"
+                    href="https://810teams.github.io/video-game-sales"
+                  >
+                    <div class="gallery-hover">
+                      <div class="gallery-hover-content">
+                        <i class="fas fa-plus fa-3x"></i>
+                      </div>
+                    </div>
+                    <img
+                      class="img-fluid"
+                      src="https://github.com/810Teams/video-game-sales/blob/master/docs/img/header-bg.jpg?raw=true"
+                      alt=""
+                    />
+                  </a>
+                  <div class="gallery-caption">
+                    <h4>Video Game Sales</h4>
+                    <p class="text-muted">Data Analysis Project</p>
+                  </div>
+                </div>
+
+                <!-- Gallery Item - UEC Sakura Science Program Experience -->
+                <div class="col-md-4 col-sm-6 gallery-item">
+                  <a
+                    class="gallery-link"
+                    target="_blank"
+                    href="https://medium.com/@810teams/uec-sakura-science-program-experience-483e9d2585d2"
+                  >
+                    <div class="gallery-hover">
+                      <div class="gallery-hover-content">
+                        <i class="fas fa-plus fa-3x"></i>
+                      </div>
+                    </div>
+                    <img
+                      class="img-fluid"
+                      src="https://miro.medium.com/max/8064/1*Q2vT1viAZOxH8fQgcs1V8g.jpeg"
+                      alt=""
+                    />
+                  </a>
+                  <div class="gallery-caption">
+                    <h4>UEC Sakura Science Program</h4>
+                    <p class="text-muted">Exchange Program Story</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
