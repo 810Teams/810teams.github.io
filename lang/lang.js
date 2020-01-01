@@ -33,7 +33,7 @@ var app = new Vue({
         skills: {
           en: "Skills",
           th: "ความสามารถ",
-          jp: "スキリ"
+          jp: "スキル"
         },
         achievements: {
           en: "Achievements",
