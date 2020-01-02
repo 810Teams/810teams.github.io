@@ -51,7 +51,7 @@ var app = new Vue({
         firstName: {
           en: "Teerapat",
           th: "ธีรภัทร",
-          jp: "チィーラパット"
+          jp: "ティーラパット"
         },
         lastName: {
           en: "Kraisrisirikul",
