@@ -8,22 +8,18 @@ var app = new Vue({
   data: {
     langList: ["en", "th", "jp"],
     lang: "en",
-    template: {
-      en: "",
-      th: "",
-      jp: ""
-    },
+    init: false,
     content: {
       nav: {
         about: {
           en: "About",
           th: "เกี่ยวกับ",
-          jp: "私の事"
+          jp: "自分"
         },
         education: {
           en: "Education",
           th: "การศึกษา",
-          jp: "学"
+          jp: "教育"
         },
         activities: {
           en: "Activities",
@@ -33,7 +29,7 @@ var app = new Vue({
         skills: {
           en: "Skills",
           th: "ความสามารถ",
-          jp: "スキル"
+          jp: "能力"
         },
         achievements: {
           en: "Achievements",
@@ -44,6 +40,11 @@ var app = new Vue({
           en: "Interests",
           th: "ความสนใจ",
           jp: "興味"
+        },
+        gallery: {
+          en: "Gallery",
+          th: "แกลเลอรี",
+          jp: "ギャラリー"
         }
       },
       about: {
@@ -74,14 +75,17 @@ var app = new Vue({
   },
   methods: {
     initLanguage: function() {
-      var url = window.location.href;
+      if (this.init) {
+        return;
+      }
 
+      this.init = true;
+      var url = window.location.href;
       if (url.split("?").length == 1) {
         return;
       }
 
       var args = url.split("?")[1].split("&");
-
       args.forEach((item, index) => {
         if (item.split("=")[0] == "lang") {
           this.setLanguage(item.split("=")[1]);

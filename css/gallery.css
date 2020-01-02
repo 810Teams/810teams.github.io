@@ -36,11 +36,11 @@
   height: 100%;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(254, 209, 54, 0.9);
+  background: var(--palette-main);
 }
 
 #gallery .gallery-item .gallery-link .gallery-hover:hover {
-  opacity: 1;
+  opacity: 0.75;
 }
 
 #gallery .gallery-item .gallery-link .gallery-hover .gallery-hover-content {

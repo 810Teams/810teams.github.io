@@ -1,0 +1,47 @@
+body {
+  font-family: "Kanit", "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "kanit", "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-weight: 500; /* DEFAULT 700 */
+}
+
+h1 {
+  font-size: 5.5rem; /* DEFAULT 6 */
+  line-height: 5rem; /* DEFAULT 5.5 */
+}
+
+h2 {
+  font-size: 3.5rem; /* DEFAULT 3.5 */
+}
+
+h3 {
+  font-size: 2rem; /* DEFAULT 3 */
+}
+
+p.lead {
+  font-size: 1.15rem; /* DEFAULT 1.15 */
+  font-weight: 300; /* DEFAULT 400 */
+}
+
+.subheading {
+  font-weight: 400; /* DEFAULT 500 */
+  font-family: "Kanit", "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-size: 1.3rem; /* DEFAULT 1.5 */
+}
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: 400; /* DEFAULT 800 */
+  letter-spacing: 0.05rem; /* DEFAULT 0.05 */
+}

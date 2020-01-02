@@ -18,6 +18,8 @@
     />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" />
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Kanit:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/resume.css" rel="stylesheet" type="text/css" />
@@ -30,8 +32,11 @@
       <!-- Onload Methods -->
       <div style="display: none;">
         {{ initLanguage() }}
+        <link v-if="lang === 'th'" href="css/resume-th.css" rel="stylesheet" type="text/css" />
+        <link v-if="lang === 'jp'" href="css/resume-jp.css" rel="stylesheet" type="text/css" />
       </div>
 
+      <!-- Multi-language Support - Completed -->
       <!-- Navigation Bar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -84,7 +89,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
+              <a class="nav-link js-scroll-trigger" href="#gallery">{{ get(content.nav.gallery) }}</a>
             </li>
             <br />
             <li class="nav-item">
@@ -111,15 +116,22 @@
       <!-- Content -->
       <div class="container-fluid p-0">
 
+        <!-- Multi-language Support - Completed -->
         <!-- Section 1 - About -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
           <div class="w-100">
             <h1 class="mb-0">
-              {{ get(content.about.firstName) }}
+              <span v-if="lang != 'jp'">
+                {{ get(content.about.firstName) }}
+              </span>
               <span class="text-primary">{{ get(content.about.lastName) }}</span>
+              <span v-if="lang === 'jp'">
+                <br>
+                {{ get(content.about.firstName) }}
+              </span>
             </h1>
             <div class="subheading mb-5">
-              {{ get(content.about.location) }} · (+66) 86 086 41XX ·
+              {{ get(content.about.location) }} · 
               <a href="mailto:teerapat_saint@hotmail.com">teerapat_saint@hotmail.com</a>
             </div>
             <p class="lead mb-5">
@@ -138,6 +150,7 @@
 
         <hr class="m-0" />
 
+        <!-- Multi-language Support - Not Completed -->
         <!-- Section 2 - Education -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
           <div class="w-100">
@@ -212,6 +225,7 @@
 
         <hr class="m-0" />
 
+        <!-- Multi-language Support - Not Completed -->
         <!-- Section 3 - Activities -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="activities">
           <div class="w-100">
@@ -289,6 +303,7 @@
 
         <hr class="m-0" />
 
+        <!-- Multi-language Support - Not Completed -->
         <!-- Section 4 - Skills -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
           <div class="w-100">
@@ -406,6 +421,7 @@
 
         <hr class="m-0" />
 
+        <!-- Multi-language Support - Not Completed -->
         <!-- Section 5 - Achievements -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="achievements">
           <div class="w-100">
@@ -430,6 +446,7 @@
 
         <hr class="m-0" />
 
+        <!-- Multi-language Support - Not Completed -->
         <!-- Section 6 - Interests -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
           <div class="w-100">
@@ -449,10 +466,11 @@
 
         <hr class="m-0" />
 
+        <!-- Multi-language Support - Not Completed -->
         <!-- Section 7 - Gallery -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="gallery">
           <div class="w-100">
-            <h2 class="mb-5">Gallery</h2>
+            <h2 class="mb-5">{{ get(content.nav.gallery) }}</h2>
             <div class="container">
               <div class="row">
                 <!-- Gallery Item - Video Game Sales -->
