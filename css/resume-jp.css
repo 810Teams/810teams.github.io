@@ -16,8 +16,8 @@ h6 {
 }
 
 h1 {
-  font-size: 4.5rem; /* DEFAULT 6 */
-  line-height: 5rem; /* DEFAULT 5.5 */
+  font-size: 4rem; /* DEFAULT 6 */
+  line-height: 4.5rem; /* DEFAULT 5.5 */
 }
 
 h2 {
@@ -38,7 +38,7 @@ p.lead {
   font-family: 'Kosugi Maru', "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  font-size: 1.5rem; /* DEFAULT 1.5 */
+  font-size: 1.25rem; /* DEFAULT 1.5 */
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
