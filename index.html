@@ -63,33 +63,33 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">{{ get(content.nav.about) }}</a>
+              <a class="nav-link js-scroll-trigger" href="#about">{{ get(content.about.title) }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#education"
-                >{{ get(content.nav.education) }}</a
+                >{{ get(content.education.title) }}</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#activities"
-                >{{ get(content.nav.activities) }}</a
+                >{{ get(content.activities.title) }}</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills">{{ get(content.nav.skills) }}</a>
+              <a class="nav-link js-scroll-trigger" href="#skills">{{ get(content.skills.title) }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#achievements"
-                >{{ get(content.nav.achievements) }}</a
+                >{{ get(content.achievements.title) }}</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#interests"
-                >{{ get(content.nav.interests) }}</a
+                >{{ get(content.interests.title) }}</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#gallery">{{ get(content.nav.gallery) }}</a>
+              <a class="nav-link js-scroll-trigger" href="#gallery">{{ get(content.gallery.title) }}</a>
             </li>
             <br />
             <li class="nav-item">
@@ -147,77 +147,30 @@
             </div>
           </div>
         </section>
-
         <hr class="m-0" />
 
         <!-- Multi-language Support - Not Completed -->
         <!-- Section 2 - Education -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
           <div class="w-100">
-            <h2 class="mb-5">{{ get(content.nav.education) }}</h2>
+            <h2 class="mb-5">{{ get(content.education.title) }}</h2>
 
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div v-for="item in content.education.items" class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
                 <h3 class="mb-0">
-                  King Mongkut's Institute of Technology Ladkrabang
+                  {{ get(item.title) }}
                 </h3>
                 <div class="subheading mb-3">
-                  Bachelor of Science - BSc, Information Technology
+                  {{ get(item.subtitle) }}
                 </div>
                 <ul class="fa-ul mb-0">
-                  <li>
-                    <i class="fa-li fa fa-certificate text-warning"></i>Current Cumulative GPA of
-                    3.84
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-certificate text-warning"></i>4-Year Scholarship Student
+                  <li v-for="i in item.list">
+                    <i class="fa-li fa fa-certificate text-warning"></i>{{ get(i) }}
                   </li>
                 </ul>
               </div>
               <div class="resume-date text-md-right">
-                <span class="text-primary">August 2017 - Present</span>
-              </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div class="resume-content">
-                <h3 class="mb-0">Satriwitthaya 2 School (High School)</h3>
-                <div class="subheading mb-3">
-                  Mathematics and Science Major, Special Program (SP)
-                </div>
-                <ul class="fa-ul mb-0">
-                  <li>
-                    <i class="fa-li fa fa-certificate text-warning"></i>Cumulative GPA of 3.17
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-certificate text-warning"></i>
-                    Special Program (SP) specializes in the addition of English classes and
-                    activities.
-                  </li>
-                </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">May 2014 - March 2017</span>
-              </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div class="resume-content">
-                <h3 class="mb-0">Satriwitthaya 2 School (Middle School)</h3>
-                <div class="subheading mb-3">English Program (EP)</div>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">May 2011 - March 2014</span>
-              </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-              <div class="resume-content">
-                <h3 class="mb-0">Chokchai School (Primary School)</h3>
-                <div class="subheading mb-3">English Program (EP)</div>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">May 2005 - March 2011</span>
+                <span class="text-primary">{{ get(item.date) }}</span>
               </div>
             </div>
           </div>
@@ -229,7 +182,7 @@
         <!-- Section 3 - Activities -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="activities">
           <div class="w-100">
-            <h2 class="mb-5">{{ get(content.nav.activities) }}</h2>
+            <h2 class="mb-5">{{ get(content.activities.title) }}</h2>
 
             <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
@@ -307,7 +260,7 @@
         <!-- Section 4 - Skills -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
           <div class="w-100">
-            <h2 class="mb-5">{{ get(content.nav.skills) }}</h2>
+            <h2 class="mb-5">{{ get(content.skills.title) }}</h2>
 
             <div class="mb-5">
               <div class="subheading mb-3">
@@ -425,7 +378,7 @@
         <!-- Section 5 - Achievements -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="achievements">
           <div class="w-100">
-            <h2 class="mb-5">{{ get(content.nav.achievements) }}</h2>
+            <h2 class="mb-5">{{ get(content.achievements.title) }}</h2>
             <ul class="fa-ul mb-0">
               <li>
                 <i class="fa-li fa fa-certificate text-warning"></i>
@@ -450,7 +403,7 @@
         <!-- Section 6 - Interests -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
           <div class="w-100">
-            <h2 class="mb-5">{{ get(content.nav.interests) }}</h2>
+            <h2 class="mb-5">{{ get(content.interests.title) }}</h2>
             <p>
               In a field of information technology, my most interested topic would be software and
               web development. As for special topics, I would pick data-related topics, machine
@@ -470,7 +423,7 @@
         <!-- Section 7 - Gallery -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="gallery">
           <div class="w-100">
-            <h2 class="mb-5">{{ get(content.nav.gallery) }}</h2>
+            <h2 class="mb-5">{{ get(content.gallery.title) }}</h2>
             <div class="container">
               <div class="row">
                 <!-- Gallery Item - Video Game Sales -->
