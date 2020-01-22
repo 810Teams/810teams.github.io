@@ -101,7 +101,7 @@ var app = new Vue({
               },
               {
                 en: "Special Program (SP) specializes in the addition of English classes and activities.",
-                th: "ห้องเรียนพิเศษ (SP) คือโปรแกรมที่เพิ่มคาบเรียนและกิจกรรมภาษาอังกฤษให้มากขึ้น",
+                th: "ห้องเรียนพิเศษ (SP) คือโปรแกรมที่ถูกเพิ่มชั่วโมงเรียนและกิจกรรมภาษาอังกฤษ",
                 jp: "特別プログラム（SP）は英語の授業と活動を追加されるプログラムです。"
               },
             ]
@@ -165,13 +165,6 @@ var app = new Vue({
           en: "Achievements",
           th: "ความสำเร็จ",
           jp: "業績"
-        }
-      },
-      interests: {
-        title: {
-          en: "Interests",
-          th: "ความสนใจ",
-          jp: "興味"
         }
       },
       gallery: {
