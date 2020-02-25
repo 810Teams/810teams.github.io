@@ -51,7 +51,7 @@ var app = new Vue({
             title: {
               en: "King Mongkut's Institute of Technology Ladkrabang",
               th: "สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-              jp: "King Mongkut's Institute of Technology Ladkrabang"
+              jp: "モンクット王ラカバン工科大学"
             },
             subtitle: {
               en: "Bachelor of Science - BSc, Information Technology",
