@@ -65,7 +65,7 @@ var app = new Vue({
             },
             list: [
               {
-                en: "Current Cumulative GPA of 3.71",
+                en: "Current Cumulative GPA of 3.73",
                 th: "ผลการเรียนเฉลี่ย 3.73",
                 jp: "３.７３の総合成績"
               },
